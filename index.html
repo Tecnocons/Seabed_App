@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seabed Scanner</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="video.css"> <!-- Include il foglio di stile per la sezione video -->
 </head>
 <body>
   <!-- Layer nero trasparente -->
@@ -28,7 +29,22 @@
   <!-- Pagina Video -->
   <div class="container video-page" id="video-page">
     <div class="video-content">
-      <h1>Questa e' la sezione video</h1>
+      <h1>Carica un video</h1>
+      <form id="video-upload-form">
+        <div class="form-group">
+          <label for="video-file">Scegli un video:</label>
+          <input type="file" id="video-file" accept="video/*" required>
+        </div>
+        <div class="form-group">
+          <label for="video-date">Data del video:</label>
+          <input type="date" id="video-date" required>
+        </div>
+        <div class="form-group">
+          <label for="video-location">Luogo del video:</label>
+          <input type="text" id="video-location" placeholder="Inserisci il luogo" required>
+        </div>
+        <button type="submit">Carica</button>
+      </form>
       <button id="back-btn">Torna Indietro</button>
     </div>
   </div>
