@@ -1,73 +1,170 @@
 /* Stili della sezione video */
-
 .video-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    width: 90%; /* Riduce la larghezza al 90% del viewport */
+    max-width: 1000px; /* Imposta una larghezza massima */
+    margin: 0 auto; /* Centratura orizzontale */
   }
   
   h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: white;
+    color: #333;
+    text-align: center;
   }
   
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  #uploaded-videos {
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  #uploaded-videos h2 {
+    font-size: 1.8rem;
+    color: #333;
     margin-bottom: 20px;
+  }
+  
+  /* Stile della tabella di video caricati */
+  .video-table {
     width: 100%;
-    max-width: 400px;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    font-size: 1.2rem;
-    color: white;
-    margin-bottom: 5px;
-  }
-  
-  input[type="file"],
-  input[type="date"],
-  input[type="text"] {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-  }
-  
-  button {
-    padding: 10px 20px;
+    max-width: 100%; /* Impedisce che la tabella superi il 100% della larghezza */
+    border-collapse: collapse;
     background-color: white;
-    color: black;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra orizzontalmente i contenuti */
+  }
+  
+  .video-table th, .video-table td {
+    padding: 15px;
+    text-align: center; /* Centra il testo nelle celle */
+    vertical-align: middle; /* Centra verticalmente i contenuti */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .video-table th {
+    background-color: #f4f6f9;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .video-table tr {
     transition: background-color 0.3s ease;
+  }
+  
+  .video-table tr:hover {
+    background-color: #f1f5f9;
+  }
+  
+  .video-table td span {
+    font-weight: bold;
+    color: #5f6368;
+  }
+  
+  .video-table td .badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: white;
+    display: inline-block;
+  }
+  
+  .badge-date {
+    background-color: #4CAF50;  /* Verde */
+  }
+  
+  .badge-location {
+    background-color: #FF9800;  /* Arancione */
+  }
+  
+  .badge-name {
+    background-color: #2196F3;  /* Blu */
+  }
+  
+  /* Stile pulsante bookmark */
+  .bookmarkBtn {
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.349);
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
     margin-top: 10px;
   }
   
-  button:hover {
-    background-color: #ddd;
+  .IconContainer {
+    width: 50px;
+    height: 30px;
+    background: rgb(88, 127, 225);/*linear-gradient(to bottom, rgb(255, 255, 255), rgb(236, 22, 22));*/
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: 0.3s;
   }
   
-  /* Stile del pulsante per tornare indietro */
-  #back-btn {
-    margin-top: 20px;
-    background-color: #f44336;
+  .icon {
+    width: 100%; /* L'immagine si adatterà al contenitore */
+    height: 100%;
+    object-fit: contain; /* Assicura che l'immagine si adatti correttamente */
+  }
+  
+  .text {
+    height: 100%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+    transition-duration: 0.3s;
+    font-size: 1.04em;
+  }
+  
+  .bookmarkBtn:hover .IconContainer {
+    width: 90px;
+    transition-duration: 0.3s;
+  }
+  
+  .bookmarkBtn:hover .text {
+    transform: translate(10px);
+    width: 0;
+    font-size: 0;
+    transition-duration: 0.3s;
+  }
+  
+  .bookmarkBtn:active {
+    transform: scale(0.95);
+    transition-duration: 0.3s;
+  }
+  
+  
+  /* Stile del pulsante per tornare alla home */
+.bottom-left {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;  /* Verde */
     color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
     border-radius: 5px;
   }
   
-  #back-btn:hover {
-    background-color: #d32f2f;
+  .bottom-left:hover {
+    background-color: #388E3C;
   }
   

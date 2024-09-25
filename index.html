@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seabed Scanner</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="video.css"> <!-- Include il foglio di stile per la sezione video -->
+  <link rel="stylesheet" href="video.css">
 </head>
 <body>
   <!-- Layer nero trasparente -->
@@ -26,8 +26,38 @@
     </div>
   </div>
 
-  <!-- Pagina Video -->
-  <div class="container video-page" id="video-page">
+<!-- Pagina Lista Video -->
+<div class="container video-page" id="video-list-page">
+  <div class="video-content">
+    <h1>Lista dei video</h1>
+    <div id="uploaded-videos">
+      <h2>Video caricati</h2>
+      <!-- Tabella per la lista dei video caricati -->
+      <table class="video-table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Data</th>
+            <th>Luogo</th>
+          </tr>
+        </thead>
+        <tbody id="video-list"></tbody> <!-- Lista dei video caricati -->
+      </table>
+    </div>
+    <!-- Pulsante per aprire la pagina di caricamento video -->
+    <button class="bookmarkBtn" id="upload-btn">
+      <span class="IconContainer">
+        <img src="assets/upload.png" alt="Icona di upload" class="icon" />
+      </span>
+      <p class="text">Carica</p>
+    </button>
+    <!-- Pulsante per tornare alla pagina principale -->
+    <button id="back-to-main-btn" class="bottom-left">Torna alla home</button>
+  </div>
+</div>
+
+  <!-- Pagina di caricamento video -->
+  <div class="container video-page" id="video-upload-page">
     <div class="video-content">
       <h1>Carica un video</h1>
       <form id="video-upload-form">
@@ -45,7 +75,8 @@
         </div>
         <button type="submit">Carica</button>
       </form>
-      <button id="back-btn">Torna Indietro</button>
+      <!-- Pulsante per tornare alla lista -->
+      <button id="back-to-list-btn" class="bottom-right">Torna alla lista</button>
     </div>
   </div>
 
